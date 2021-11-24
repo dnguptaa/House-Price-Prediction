@@ -5,15 +5,12 @@
 
 <div style="margin: 5%">
     <h2 style="color:red">Result!!!!</h2>
-    {% if accuracy >= 0.8 %}
     <div class="alert alert-success">
-        The price of house is {{ price }} with the accuracy is {{ accuracy }}%
+        The price of house is Rs {{ price }}
     </div>
-    {% else %}
-    <div class="alert alert-warning">
-        The price of house is {{ price }} with the accuracy is {{ accuracy }}%
+    <div class="alert alert-primary" role="alert" style="text-align: center; margin: 0 34%;">
+        <h5>The accuracy of the model is {{ accuracy }}% </h5>
     </div>
-    {% endif %}
     <a class="btn btn-primary" href="/" role="button">Go to Home</a>
 </div>
 {% endblock %}
