@@ -5,3 +5,4 @@ __pycache__
 migration_scripts/
 env/
 .vscode/
+.env
