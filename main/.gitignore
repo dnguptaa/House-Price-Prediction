@@ -1,0 +1,7 @@
+*.pyc
+db.sqlite3
+new_app/migrations/
+__pycache__
+migration_scripts/
+env/
+.vscode/

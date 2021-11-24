@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} House Price Result {% endblock %}
+
+{% block body %}
+
+<div style="margin: 5%">
+    <h2 style="color:red">Result!!!!</h2>
+    {% if accuracy >= 0.8 %}
+    <div class="alert alert-success">
+        The price of house is {{ price }} with the accuracy is {{ accuracy }}%
+    </div>
+    {% else %}
+    <div class="alert alert-warning">
+        The price of house is {{ price }} with the accuracy is {{ accuracy }}%
+    </div>
+    {% endif %}
+    <a class="btn btn-primary" href="/" role="button">Go to Home</a>
+</div>
+{% endblock %}

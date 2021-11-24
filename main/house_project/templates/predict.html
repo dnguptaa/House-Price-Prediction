@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %} Predict House Price {% endblock %}
+
+{% block body %}
+
+<div style="margin: 5% 0  0 5%">
+    <div style="text-align: center">
+        <h3 style="color:steelblue">House details</h3>
+    </div>
+    <form action="/house_prediction" method="POST" style="margin: 2% 0;">
+        {% csrf_token %}
+        <div class="container">
+            <div class="row">
+                {% for column, test_value in data %}
+                <div class="col-sm" style="margin: 2% 0">
+                    <label for={{column}}>Enter the value of {{column}}</label>
+                    <input style="margin-right: 10px;" id={{column}} type=" text" name={{column}} value={{test_value}}>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="text-center">
+            <button type=" submit" class="btn btn-primary btn-lg">Check Price</button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}

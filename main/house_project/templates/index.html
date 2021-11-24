@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %} House {% endblock %}
+
+{% block body %}
+<div style="margin: 15% 0 0 15%">
+    <h3>Predict the house of your price</h3>
+    <div>
+        <a href="{% url 'house_prediction' %}">Click Here</a>
+    </div>
+</div>
+{% endblock %}
