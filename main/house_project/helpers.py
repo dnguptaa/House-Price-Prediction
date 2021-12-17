@@ -43,13 +43,6 @@ preprocessor = ColumnTransformer(
 )
 preprocessor.fit(df_new)
 
-print(
-    preprocessor.named_transformers_["mode_imputer"].named_steps["imputer"].statistics_
-)
-print(
-    preprocessor.named_transformers_["mean_imputer"].named_steps["imputer"].statistics_
-)
-
 # dataset for the columns whose null value has been imputed
 df_clean = preprocessor.transform(df_new)
 df_clean_miss_var = pd.DataFrame(df_clean, columns=missing_cat_vars + missing_num_vars)
